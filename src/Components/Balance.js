@@ -1,5 +1,6 @@
 import React,{useContext} from 'react';
-import {GlobalContext} from "../Context/GlobalState"
+import {GlobalContext} from "../Context/GlobalState";
+import IndianNumberingSystem from "./IndianNumberingSystem";
 
 const Balance = () => {
   const {transactions} = useContext(GlobalContext);
@@ -10,7 +11,10 @@ const Balance = () => {
   return (
     <>
         <h4>Your Balance</h4>
-        <h1>&#8377; {balance}</h1>
+        <h1>
+          &#8377; 
+          <IndianNumberingSystem amount={balance}/>
+        </h1>
     </>
   )
 }

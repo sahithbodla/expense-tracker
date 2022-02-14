@@ -1,5 +1,6 @@
 import React from 'react';
-import {GlobalContext} from "../Context/GlobalState"
+import {GlobalContext} from "../Context/GlobalState";
+import IndianNumberingSystem from "./IndianNumberingSystem";
 
 const IncomeExpenses = () => {
   const {transactions} = React.useContext(GlobalContext);
@@ -20,11 +21,16 @@ const IncomeExpenses = () => {
     <div className="inc-exp-container">
         <div>
             <h4>Income</h4>
-            <p className="money plus">&#8377; {income}</p>
+            <p className="money plus">
+              &#8377; 
+              <IndianNumberingSystem amount={income}/></p>
         </div>
         <div>
             <h4>Expense</h4>
-            <p className="money minus">&#8377; {Math.abs(expense).toFixed(2)}</p>
+            <p className="money minus">
+              &#8377; 
+              <IndianNumberingSystem amount={Math.abs(expense).toFixed(2)}/>
+            </p>
         </div>
     </div>
   )
