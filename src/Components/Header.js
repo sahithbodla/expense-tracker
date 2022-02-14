@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <h2>
-            Expense Tracker
+            <span class="title">Ex</span>pense <span class="title">Tra</span>cker
         </h2>
     )
 }

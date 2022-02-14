@@ -155,3 +155,7 @@ input[type="number"] {
     width: 300px;
   }
 }
+
+.title {
+  color: #401bf8;
+}
