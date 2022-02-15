@@ -159,3 +159,8 @@ input[type="number"] {
 .title {
   color: #401bf8;
 }
+
+.date {
+  display: flex;
+  flex-direction: column;
+}

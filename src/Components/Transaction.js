@@ -8,7 +8,14 @@ const Transaction = ({transaction}) => {
 
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-            {transaction.text} 
+            <div className="date">
+                <div style={{fontSize: '20px'}}>
+                    {transaction.text}
+                </div>
+                <div style={{fontSize: '10px', color: "#401bf8"}}>
+                    {transaction.date}
+                </div>                
+            </div>
             <span>
                 {sign} &#8377; <IndianNumberingSystem amount={Math.abs(transaction.amount).toFixed(2)}/>
             </span> 

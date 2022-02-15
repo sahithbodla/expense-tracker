@@ -11,10 +11,17 @@ const AddTransaction = () => {
     const onSubmit = e => {
         e.preventDefault();
 
+        const dateNow = new Date("2022-1-10");
+        const correctedMonth = dateNow.getMonth()>9 ? dateNow.getMonth()+1 : '0' + (dateNow.getMonth() + 1);
+        const correctedDate = dateNow.getDate()>9 ? dateNow.getDate() : "0" + dateNow.getDate();
+
+        const date = `${dateNow.getFullYear()}-${correctedMonth}-${correctedDate}`;
+
         const newTransaction = {
             id: Math.floor(Math.random() * 1000000000),
             text,
-            amount
+            amount,
+            date
         }
 
         addTransaction(newTransaction);
